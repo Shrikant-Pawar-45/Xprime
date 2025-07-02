@@ -80,7 +80,10 @@ function App() {
           {/* Redirects */}
           <Route path='*' element={<Navigate to="/" />} />
         </Routes>
-        <Footer/>
+        <Routes>
+          <Route path="/" element={null} />
+          <Route path="*" element={<Footer />} />
+        </Routes>
       </div>
     </HashRouter>
   )
