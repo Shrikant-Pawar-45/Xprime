@@ -55,7 +55,7 @@ function App() {
   }, [])
 
   return (
-    <Router basename="/Xprime">
+    <HashRouter>
       
       <div className='App'>
         {/* <Videobg /> */}
@@ -80,9 +80,9 @@ function App() {
           {/* Redirects */}
           <Route path='*' element={<Navigate to="/" />} />
         </Routes>
-        <Footer />
+        <Footer/>
       </div>
-    </Router>
+    </HashRouter>
   )
 }
 export default App
