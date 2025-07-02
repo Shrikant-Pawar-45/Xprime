@@ -54,7 +54,7 @@ const MenuBar = ({ user, setUser, adminLoggedIn, setAdminLoggedIn }) => {
               <li>
                 <Icon.BoxArrowRight
                   size={24}
-                  className='user-logo user-logo-pointer logout-icon'
+                  className='user-logo-a user-logo-pointer logout-icon'
                   onClick={handleLogout}
                   title="Logout"
                   style={{ cursor: 'pointer', color: 'white' }}
@@ -94,8 +94,6 @@ const MenuBar = ({ user, setUser, adminLoggedIn, setAdminLoggedIn }) => {
                           <Link to="/profile" onClick={() => setMenuOpen(false)} className="user-menu-link" >Profile</Link>
                           }</li>
                           <li><Link to="/login" onClick={handleLogout} className="user-menu-link">Logout</Link> </li>
-                          
-                          
                         </div>
                       </div>
                     )}

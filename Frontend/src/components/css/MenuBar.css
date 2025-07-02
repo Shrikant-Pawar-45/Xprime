@@ -200,7 +200,7 @@
   .user-menu-dropdown{
   display: none;
 }
-.user-logo{
+ .user-logo{
   display: none;
 }
 }
@@ -239,7 +239,7 @@
   color: var(--hover-color);
 }
 
-.user-logo.user-logo-pointer:hover {
+.user-logo-a.user-logo-pointer:hover,.user-logo.user-logo-pointer:hover {
   color: red;
   cursor: pointer;
 }
