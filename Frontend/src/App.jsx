@@ -19,7 +19,7 @@ import Forgetpassword from './components/jsx/Forgetpassword.jsx'
 import UserProfile from './components/jsx/UserProfile.jsx'
 
 
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
+import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import { auth } from '../src/components/jsx/firebase-init'
 import { onAuthStateChanged, signOut } from 'firebase/auth'
 
@@ -80,10 +80,7 @@ function App() {
           {/* Redirects */}
           <Route path='*' element={<Navigate to="/" />} />
         </Routes>
-        <Routes>
-          <Route path="/" element={null} />
-          <Route path="*" element={<Footer />} />
-        </Routes>
+        <Footer />
       </div>
     </Router>
   )
