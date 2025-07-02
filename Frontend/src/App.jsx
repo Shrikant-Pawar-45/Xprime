@@ -19,7 +19,7 @@ import Forgetpassword from './components/jsx/Forgetpassword.jsx'
 import UserProfile from './components/jsx/UserProfile.jsx'
 
 
-import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { auth } from '../src/components/jsx/firebase-init'
 import { onAuthStateChanged, signOut } from 'firebase/auth'
 

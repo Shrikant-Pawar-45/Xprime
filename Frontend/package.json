@@ -4,6 +4,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+<<<<<<< HEAD
   "scripts": {
     "start": "react-scripts start",
     "dev": "vite",
@@ -11,6 +12,16 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
+=======
+ "scripts": {
+  "dev": "vite",
+  "build": "vite build",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d dist",
+  "lint": "eslint .",
+  "preview": "vite preview"
+},
+>>>>>>> 956e556ee1366169816a4436a9286b57ad7bb853
   "dependencies": {
     "emailjs-com": "^3.2.0",
     "firebase": "^11.9.1",
