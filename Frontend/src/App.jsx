@@ -55,7 +55,7 @@ function App() {
   }, [])
 
   return (
-    <Router  basename="/Xprime">
+    <Router>
       
       <div className='App'>
         {/* <Videobg /> */}
