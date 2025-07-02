@@ -1,0 +1,139 @@
+.gallery-container {
+  column-count: 4;
+  column-gap: 20px;
+  padding: 10px;
+   margin: 100px 0; 
+   backdrop-filter: blur(5px);
+}
+
+.gallery-item {
+  position: relative;
+  margin-bottom: 20px;
+ 
+  break-inside: avoid;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  cursor: pointer;
+  background-color: #222;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Hide overlay by default */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.148);
+  color: #fff;
+  padding: 10px;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+  opacity: 0;
+  backdrop-filter: blur(3px);
+  visibility: hidden;
+  transform: translateY(100%);
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Show overlay on hover with bottom to up transition */
+.gallery-item:hover .overlay {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0%);
+}
+
+.overlay h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.1em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.overlay p {
+  margin: 0;
+  font-size: 0.9em;
+  max-height: 3em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* Copy button styles */
+.copy-btn {
+  background: rgba(0, 0, 0, 0);
+  
+  color: red;
+  font-size: 1.2em;
+  cursor: pointer;
+  margin-top: 8px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  /* transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease; */
+}
+
+.copy-btn:hover {
+  background-color: red;
+  border-color: red;
+  color: white;
+}
+
+/* Copy feedback message */
+.copy-feedback {
+  margin-top: 5px;
+  font-size: 0.8em;
+  color: #0f0;
+  font-weight: bold;
+}
+.gallery-item {
+  opacity: 0;
+  transform: translateY(-40px);
+  animation: slideDownFadeIn 0.8s cubic-bezier(.77,0,.18,1) forwards;
+}
+
+.gallery-item:nth-child(1) { animation-delay: 0.1s; }
+.gallery-item:nth-child(2) { animation-delay: 0.2s; }
+.gallery-item:nth-child(3) { animation-delay: 0.3s; }
+/* Add more nth-child rules as needed for more images */
+
+@keyframes slideDownFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 1200px) {
+  .gallery-container {
+    column-count: 4;
+  }
+}
+
+@media (max-width: 900px) {
+  .gallery-container {
+    column-count: 3;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-container {
+    column-count: 2;
+  }
+}

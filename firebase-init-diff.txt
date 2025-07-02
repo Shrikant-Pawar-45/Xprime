@@ -1,0 +1,21 @@
+======= 
+import { getAnalytics } from "firebase/analytics";
+import { getDatabase } from "firebase/database";
+>>>>>>> REPLACE
+
+<<<<<<< SEARCH
+const db = getFirestore(app);
+const analytics = getAnalytics(app);
+======= 
+const db = getFirestore(app);
+
+// Initialize Realtime Database and get a reference to the service
+const realtimeDb = getDatabase(app);
+
+const analytics = getAnalytics(app);
+>>>>>>> REPLACE
+
+<<<<<<< SEARCH
+export { app, auth, db ,analytics};
+======= 
+export { app, auth, db, realtimeDb, analytics };

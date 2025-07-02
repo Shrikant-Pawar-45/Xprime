@@ -1,0 +1,23 @@
+.about-container {
+  width: 80%;
+  margin: 120px auto;
+  padding: 30px;
+  background-color: var(--bg-color);
+  color: white;
+  border: 3px solid var(--border-color);
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.about-container h2 {
+  color: red;
+  margin-bottom: 20px;
+}
+
+.about-container p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
