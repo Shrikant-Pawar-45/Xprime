@@ -14,7 +14,7 @@ const Alogin = ({ setAdminLoggedIn }) => {
     setError('')
     setSuccess('')
     // Hardcoded username and password check
-    if (username === 'shrikant' && password === 'srikant@45') {
+    if (username === 'shrikant' && password === '264#Shrikant@45') {
       setSuccess('Login successful!')
       setUsername('')
       setPassword('')
