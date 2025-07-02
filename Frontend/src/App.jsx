@@ -55,7 +55,7 @@ function App() {
   }, [])
 
   return (
-    <Router>
+    <HashRouter>
       
       <div className='App'>
         {/* <Videobg /> */}
@@ -82,7 +82,7 @@ function App() {
         </Routes>
         <Footer/>
       </div>
-    </Router>
+    </HashRouter>
   )
 }
 export default App
