@@ -107,7 +107,7 @@ export class Contact extends Component {
               </div>
               <div className="buttoncontact">
                 <button type="submit" className="contact-button">
-                  Submit
+                  Send
                 </button>
               </div>
             </form>

@@ -5,7 +5,7 @@
   font-family: 'Inter', sans-serif;
 }
 html {
-  scroll-padding-top: 70px; /* Adjust to your header height + 10px */
+  scroll-padding-top: 70px;
 }
 body{
 
