@@ -6,4 +6,4 @@ RUN mvn clean package
 FROM eclipse-temurin:17-jdk
 COPY --from=build /app/target/*.jar demo.jar
 EXPOSE 8080
-ENTRYPOINT ["java", "-Dserver.port=$PORT", "-jar", "demo.jar"]
+ENTRYPOINT sh -c 'java -Dserver.port=${PORT:-8080} -jar demo.jar'
