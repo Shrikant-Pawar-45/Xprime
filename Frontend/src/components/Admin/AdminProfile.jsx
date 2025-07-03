@@ -7,51 +7,47 @@ export class AdminProfile extends Component {
     super(props);
     this.state = {
       admin: {
-        fullName: 'Admin Name',
-        email: 'admin@example.com',
-        mobile: '+91 1234567890',
-        gender: 'Not Specified',
-        birthdate: '01-01-1970',
-        profileImage: 'https://via.placeholder.com/150' // Replace with admin's actual image URL
+        fullName: 'Shrikant Ashok Pawar',
+        email: 'shrikantpawar493@gmail.com',
+        mobile: '+91 8862007036',
+        gender: 'Male',
+        birthdate: '07-07-2005'
+       // Replace with admin's actual image URL
       }
     };
   }
 
   render() {
-    const { fullName, email, mobile, gender, birthdate, profileImage } = this.state.admin;
+    const { fullName, email, mobile, gender, birthdate } = this.state.admin;
     return (
-      <div className="admin-profile-container">
-        <h2>Admin Profile</h2>
-        <div className="admin-profile-card">
-          <img src={ProfileImage} alt="Admin Profile" className="admin-profile-image" />
-          <div className="admin-profile-details">
-            <table>
-              <tbody>
-                <tr>
-                  <td><strong>Full Name:</strong></td>
-                  <td>{fullName}</td>
-                </tr>
-                <tr>
-                  <td><strong>Email:</strong></td>
-                  <td>{email}</td>
-                </tr>
-                <tr>
-                  <td><strong>Mobile:</strong></td>
-                  <td>{mobile}</td>
-                </tr>
-                <tr>
-                  <td><strong>Gender:</strong></td>
-                  <td>{gender}</td>
-                </tr>
-                <tr>
-                  <td><strong>Birthdate:</strong></td>
-                  <td>{birthdate}</td>
-                </tr>
-              </tbody>
-            </table>
+      <div className="profile-container">
+            <h2>Admin Profile</h2>
+            <div className="profile-card">
+              <img src={ProfileImage} alt="User Profile" className="profile-image" />
+              <div className="profile-details">
+                <div className="profile-info-row">
+                  <label>Full Name:</label>
+                  <span>{fullName}</span>
+                </div>
+                <div className="profile-info-row">
+                  <label>Email:</label>
+                  <span>{email}</span>
+                </div>
+                <div className="profile-info-row">
+                  <label>Mobile:</label>
+                  <span>{mobile}</span>
+                </div>
+                <div className="profile-info-row">
+                  <label>Gender:</label>
+                  <span>{gender}</span>
+                </div>
+                <div className="profile-info-row">
+                  <label>Birthdate:</label>
+                  <span>{birthdate}</span>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
     );
   }
 }

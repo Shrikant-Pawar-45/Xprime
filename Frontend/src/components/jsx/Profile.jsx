@@ -47,34 +47,30 @@ const Profile = () => {
 
   return (
     <div className="profile-container">
-    <h2>User Profile</h2>
+      <h2>User Profile</h2>
       <div className="profile-card">
         <img src={ProfileImage} alt="User Profile" className="profile-image" />
         <div className="profile-details">
-          <table>
-            <tbody>
-              <tr>
-                <td><strong>Full Name:</strong></td>
-                <td>{fullName}</td>
-              </tr>
-              <tr>
-                <td><strong>Email:</strong></td>
-                <td>{email}</td>
-              </tr>
-              <tr>
-                <td><strong>Mobile:</strong></td>
-                <td>{mobileNumber}</td>
-              </tr>
-              <tr>
-                <td><strong>Gender:</strong></td>
-                <td>{gender}</td>
-              </tr>
-              <tr>
-                <td><strong>Birthdate:</strong></td>
-                <td>{birthdate}</td>
-              </tr>
-            </tbody>
-          </table>
+          <div className="profile-info-row">
+            <label>Full Name:</label>
+            <span>{fullName}</span>
+          </div>
+          <div className="profile-info-row">
+            <label>Email:</label>
+            <span>{email}</span>
+          </div>
+          <div className="profile-info-row">
+            <label>Mobile:</label>
+            <span>{mobileNumber}</span>
+          </div>
+          <div className="profile-info-row">
+            <label>Gender:</label>
+            <span>{gender}</span>
+          </div>
+          <div className="profile-info-row">
+            <label>Birthdate:</label>
+            <span>{birthdate}</span>
+          </div>
         </div>
       </div>
     </div>
