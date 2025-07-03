@@ -3,6 +3,6 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  base: '/Xprime/', // 👈 must match your GitHub repo name
+  base: './', // 👈 must match your GitHub repo name
   plugins: [react()],
 })
