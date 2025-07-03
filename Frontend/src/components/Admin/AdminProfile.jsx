@@ -21,7 +21,7 @@ export class AdminProfile extends Component {
     const { fullName, email, mobile, gender, birthdate } = this.state.admin;
     return (
       <div className="profile-container">
-            <h2>Admin Profile</h2>
+            <h2>Admin Profile </h2>
             <div className="profile-card">
               <img src={ProfileImage} alt="User Profile" className="profile-image" />
               <div className="profile-details">
