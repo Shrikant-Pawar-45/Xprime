@@ -1,10 +1,17 @@
 package com.codewithshrikant.Appbackend;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-@Controller
+import org.springframework.web.bind.annotation.RestController;
+@RestController
 public class Homecontroller {
-        @RequestMapping ("/api/home")
-          public String home() {
-         return "Hello from Spring Boot";
+        @GetMapping("/")
+        public String home() {
+                return "This is Home page";
+        }
+
+        @GetMapping("/api/hello")
+        public String hello() {
+                return "✅ Hello from Spring Boot!";
         }
 }
