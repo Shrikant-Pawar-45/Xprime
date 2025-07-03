@@ -65,9 +65,9 @@ export default function Main() {
           </div>
 
           {/* ✅ Backend message display */}
-          <div style={{ marginTop: '1rem', fontStyle: 'italic', color: 'green' }}>
+          {/* <div style={{ marginTop: '1rem', fontStyle: 'italic', color: 'green' }}>
             🔗 Message from backend: {backendMessage}
-          </div>
+          </div> */}
         </div>
 
         <div className="sidepanel">
