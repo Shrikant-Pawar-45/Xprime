@@ -6,6 +6,7 @@ import slideshow from '../assets/slideshow.json';
 
 export default function Main() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [backendMessage, setBackendMessage] = useState('');
 
   // Auto slide change every 3 seconds
   const sliderData = slideshow.slice();
@@ -29,6 +30,21 @@ export default function Main() {
     );
   };
 
+  // ✅ Fetch backend message on load
+  useEffect(() => {
+    const apiUrl = import.meta.env.VITE_API_URL;
+    fetch(`${apiUrl}/api/hello`)
+      .then((res) => res.text())
+      .then((data) => {
+        setBackendMessage(data);
+        console.log('Backend says:', data);
+      })
+      .catch((err) => {
+        console.error('Error fetching backend message:', err);
+        setBackendMessage('⚠️ Could not connect to backend.');
+      });
+  }, []);
+
   return (
     <>
       <div className="main-content-Top">
@@ -47,27 +63,24 @@ export default function Main() {
               <Link to="/gallery">Gallery</Link>
             </li>
           </div>
+
+          {/* ✅ Backend message display */}
+          <div style={{ marginTop: '1rem', fontStyle: 'italic', color: 'green' }}>
+            🔗 Message from backend: {backendMessage}
+          </div>
         </div>
+
         <div className="sidepanel">
           <div className="sidepanel--container">
             <div className="slider">
-              {/* Uncomment below to enable prev/next buttons */}
-              {/* <button className="slider-button prev" onClick={goToPrevious} aria-label="Previous Slide">
-                &#10094;
-              </button> */}
               <div className="slider-image-container">
                 <img
                   src={sliderData[currentIndex].image}
                   alt={sliderData[currentIndex].title}
                   className="slider-image"
                 />
-                <div className="slider-overlay">
-                  {/* {sliderData[currentIndex].title} */}
-                </div>
+                <div className="slider-overlay"></div>
               </div>
-              {/* <button className="slider-button next" onClick={goToNext} aria-label="Next Slide">
-                &#10095;
-              </button> */}
             </div>
             <div className="slider-dots">
               {sliderData.map((_, idx) => (

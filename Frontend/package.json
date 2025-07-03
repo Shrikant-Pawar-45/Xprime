@@ -10,16 +10,10 @@
     "dev": "vite",
     "build": "vite build",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
-  },
- "scripts": {
-  "dev": "vite",
-  "build": "vite build",
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d dist",
-  "lint": "eslint .",
+    "deploy": "gh-pages -d dist",
+     "lint": "eslint .",
   "preview": "vite preview"
-},
+  },
   "dependencies": {
     "emailjs-com": "^3.2.0",
     "firebase": "^11.9.1",
