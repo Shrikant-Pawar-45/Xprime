@@ -47,7 +47,7 @@ const Profile = () => {
 
   return (
     <div className="profile-container">
-      <h2>User Profile</h2>
+    <h2>User Profile</h2>
       <div className="profile-card">
         <img src={ProfileImage} alt="User Profile" className="profile-image" />
         <div className="profile-details">

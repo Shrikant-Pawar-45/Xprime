@@ -1,18 +1,18 @@
 /* Profile.css */
 
 .profile-container {
-  width: 70%;
-  height :90vh;
+  width: 50%;
+  /* max-width: 90vh; */
+  height :auto;
   justify-content: center;
   align-items: center;
   text-align: center;
   margin: 100px auto;
-  padding: 20px 30px;
+  padding: 20px ;
   border-radius: 16px;
   background-color: rgba(0, 0, 0, 0);
   backdrop-filter: blur(5px);
   border-radius: 16px;
-  padding: 20px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: var(--text-color);
@@ -24,8 +24,9 @@
   color: var(--hover-color);
 }
 .profile-card {
-  display: inline-block;
-  justify-content: center;
+  margin: auto;
+  display: inline-flex;
+  justify-content: space-evenly;
   flex-direction: row;
   align-items: center;
   gap: 20px;
@@ -36,6 +37,7 @@
 .profile-image {
   width: 120px;
   height: 120px;
+  margin: auto;
   object-fit: cover;
   border-radius: 50%;
   border: 3px solid #007bff;
@@ -44,7 +46,7 @@
 
 .profile-details {
   flex-grow: 3;
-  margin-top: 50px;
+  margin-top: 0;
 }
 
 .profile-details p {
@@ -58,7 +60,27 @@
   width: 100px;
   color: #ffffff;
 }
+@media screen and (max-width: 1196px) {
+  .profile-container {
+    width: 90%;
+    padding: 15px;
+  }
 
+  .profile-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .profile-details p strong {
+    width: auto;
+  }
+  
+}
 @media screen and (max-width: 600px) {
   .profile-card {
     flex-direction: column;
@@ -68,17 +90,66 @@
   .profile-details p strong {
     width: auto;
   }
+  .profile-image {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  object-fit: cover;
+  justify-content: center;
+  border-radius: 50%;
+  border: 3px solid #007bff;
+  background-color: var(--bg-color);
+}
+.profile-details table td {
+  padding: 2px 2px;
+  vertical-align: top;
+  font-size: 12px;
+}
+}
+
+@media screen and (max-width: 300px) {
+  .profile-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .profile-image {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 10px auto;
+    border-width: 2px;
+  }
+
+  .profile-details {
+    margin-top: 0;
+  }
+
+  .profile-details table td {
+    padding: 4px 6px;
+  }
+
+  .profile-details p, .profile-details table td {
+    font-size: 14px;
+  }
+
+  .profile-details p strong, .profile-details table td strong {
+    width: 90px;
+  }
 }
 
 .profile-details table {
-  width: 100%;
+  width: 30%;
   border-collapse: collapse;
   text-align: left;
+  justify-content: center
+  ;
 }
 
 .profile-details table td {
-  padding: 6px 8px;
+  padding: 2px 2px;
   vertical-align: top;
+  font-size: 15px;
 }
 
 .profile-details table td strong {
