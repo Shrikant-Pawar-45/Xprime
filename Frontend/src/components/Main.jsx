@@ -32,7 +32,7 @@ export default function Main() {
 
   // ✅ Fetch backend message on load
   useEffect(() => {
-    const apiUrl = import.meta.env.VITE_API_URL;
+    const apiUrl = "https://xprime-zxu1.onrender.com";
     fetch(`${apiUrl}/api/hello`)
       .then((res) => res.text())
       .then((data) => {

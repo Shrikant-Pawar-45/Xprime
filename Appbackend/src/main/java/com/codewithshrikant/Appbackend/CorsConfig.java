@@ -1,5 +1,4 @@
 package com.codewithshrikant.Appbackend;
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
@@ -15,7 +14,8 @@ public class CorsConfig {
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/api/**")
                         .allowedOrigins(
-                            "http://localhost:3000",
+                            
+                        "http://localhost:3000",
                             "http://localhost:5173",
                             "https://xprime-frontend.onrender.com"  // ✅ <-- add this
                         )
