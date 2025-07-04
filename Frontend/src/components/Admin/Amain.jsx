@@ -47,7 +47,7 @@ export class Amain extends Component {
           galleryPrompt: '',
         })
         // Send updated gallery data to backend to save in galleryData.json
-        fetch('http://localhost:8080/api/admin/gallery', {
+        fetch('https://xprime-zxu1.onrender.com/api/admin/gallery', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -85,7 +85,7 @@ export class Amain extends Component {
           trendingPrompt: '',
         })
         // Send updated trending data to backend to save in trendingData.json
-        fetch('http://localhost:8080/api/admin/trending', {
+        fetch('https://xprime-zxu1.onrender.com/api/admin/trending', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
