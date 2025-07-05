@@ -37,12 +37,12 @@ export class Trending extends Component {
     const { trendingData, copiedId, loading, error } = this.state
 
     if (loading) {
-      return 
-      <div>
-        <div className="loadingdiv" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '300vh' }}>
-          
+      return (
+      <div className="loadingdiv">
+        <p style={{color:'yellow',fontWeight:'bold'}}>Loading..!</p>
         </div>
-      </div>
+        )
+      
     }
 
     if (error) {

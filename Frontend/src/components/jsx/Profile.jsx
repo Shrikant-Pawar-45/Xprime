@@ -36,11 +36,11 @@ const Profile = () => {
   }, []);
 
   if (loading) {
-    return <div className="profile-container"><p>Loading user data...</p></div>;
+    return <div className="profile-container-message"><p style={{margin:'100px auto',fontWeight:'bold',fontSize:'19px',color:'yellow'}}>Loading user data...</p></div>;
   }
 
   if (error) {
-    return <div className="profile-container"><p className="error-message">{error}</p></div>;
+    return <div className="profile-container-message"><p className="error-message">{error}</p></div>;
   }
 
   const { fullName, email, mobileNumber, gender, birthdate } = user || {};
@@ -49,7 +49,8 @@ const Profile = () => {
     <div className="profile-container">
       <h2>User Profile</h2>
       <div className="profile-card">
-        <img src={ProfileImage} alt="User Profile" className="profile-image" />
+      <div className="image"><img src={ProfileImage} alt="User Profile" className="profile-image" /></div>
+        
         <div className="profile-details">
           <div className="profile-info-row">
             <label>Full Name:</label>

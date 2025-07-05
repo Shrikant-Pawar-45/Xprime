@@ -1,72 +1,41 @@
-.card-shine-effect {
-  --shine-deg: 45deg;
-  position: relative;
-  overflow: hidden;
-  border-radius: 0.875rem;
-  border: 1px solid rgb(15 23 42);
-  background-color: rgb(9 9 11);
-  padding: 4rem 2rem;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  max-width: 28rem;
-
-  background-repeat: no-repeat;
-  background-position: -100% 0, 0 0;
-
-  background-image: linear-gradient(
-    var(--shine-deg),
-    transparent 20%,
-    transparent 40%,
-    rgb(68, 68, 68, 0.2) 50%,
-    rgb(68, 68, 68, 0.2) 55%,
-    transparent 70%,
-    transparent 100%
-  );
-
-  background-size: 250% 250%, 100% 100%;
-  transition: background-position 0s ease;
+.loading-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px; /* Or 100vh for full screen */
 }
 
-.card-shine-effect:hover {
-  background-position: 200%0, 0 0;
-  transition-duration: 1.5s;
+.loading-dot {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+  animation: pulse 1.2s ease-in-out infinite;
 }
 
-.icon {
-  margin-bottom: 1rem;
-  display: inline-flex;
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.8);
+    opacity: 1;
+  }
 }
 
-.icon > svg {
-  border-radius: 0.375rem;
-  width: 40px;
-  height: 40px;
-  display: inline-flex;
-  background: #2563eb;
-}
-
-.title {
-  color: #fff;
-  font-size: 16px;
-  margin-bottom: 0.5rem;
-}
-
-.description {
-  font-size: 14px;
-  color: rgb(148 163 184);
-}
 
 .gallery-container {
   column-count: 4;
-  column-gap: 20px;
+  column-gap: 10px;
   padding: 10px;
-   margin: 100px 0; 
+  margin: 100px 0; 
    backdrop-filter: blur(5px);
 }
 
 .gallery-item {
   position: relative;
-  margin-bottom: 20px;
- 
+  margin-bottom: 10px;
   break-inside: avoid;
   border-radius: 8px;
   overflow: hidden;
@@ -165,7 +134,14 @@
   transform: translateY(-40px);
   animation: slideDownFadeIn 0.8s cubic-bezier(.77,0,.18,1) forwards;
 }
-
+.loadingdiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+  font-size: 24px;
+}
 .gallery-item:nth-child(1) { animation-delay: 0.1s; }
 .gallery-item:nth-child(2) { animation-delay: 0.2s; }
 .gallery-item:nth-child(3) { animation-delay: 0.3s; }

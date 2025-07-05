@@ -11,7 +11,7 @@ export class Footer extends Component {
               <div className='footer-section-First'>
                 <h2>Contact Us</h2>
                 <p>1234 Xprime St, Tech City, TX 12345</p>
-                <p>Email: Xprime@gmail.com</p>
+                <p>Email: Xprime-prompt@gmail.com</p>
               </div>
               <div className='footer-section-Middle'>
                 <h2>Xprime</h2>

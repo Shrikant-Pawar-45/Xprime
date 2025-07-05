@@ -6,11 +6,7 @@ import '../../css/Gallery.css'
 
 class LoadingDiv extends Component {
   render() {
-    return (
-       <div className="loadingdiv" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-          
-        </div>
-    )
+    return (<div className="loadingdiv" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}></div>)
   }
 }
 
@@ -55,9 +51,9 @@ export class Gallery extends Component {
 
     if (loading) {
       // Show multiple loading divs with shining animation
-      return (
-         <div className="loadingdiv" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '300vh' }}>
-          
+      return( 
+      <div className="loadingdiv">
+        <p style={{color:'yellow',fontWeight:'bold'}}>Loading..!</p>
         </div>
       )
     }
