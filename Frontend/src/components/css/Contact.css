@@ -1,0 +1,120 @@
+.contact-container {
+  width: 70%;
+  margin: 100px auto;
+  padding: 30px;
+  background-color: var(--bg-color);
+  color: white;
+  backdrop-filter: blur(8px);
+  border: 3px solid var(--border-color);
+  border-radius: 12px;
+  font-family: Arial, sans-serif;
+  display: block;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+@media screen and (max-width: 768px) {
+  .contact-container {
+    width: 90%;
+    margin: 50px auto;
+    padding: 20px;
+  }
+  .panel1, .panel2 {
+    width: 100%;
+  }
+  .buttoncontact {
+    justify-content: center;
+  }
+}
+
+.feedback-message {
+  text-align: center;
+  color: green;
+  font-weight: bold;
+  margin-top: 10px;
+}
+h1{
+  text-align: center;
+  color: var(--hover-color);
+}
+.panel1 form{
+  display: block;
+  width: 100%;
+  padding-right: 20px;
+}
+.panel2 h2 {
+  color: red;
+  margin-bottom: 20px;
+}
+
+.panel2 p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+.panel1{
+  width: 100%;
+  max-width: 600px;
+  margin: 15px auto;
+}
+.panel2{
+  display: block;
+  width: 100%;
+  align-items: center;
+  text-align: left;
+  justify-content: center;
+  margin: auto;
+}
+.form-group-c{
+  width: 100%;
+  margin: 15px 0;
+}
+.form-group-c input,.form-group-c textarea{
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 2px solid var(--border-color);
+  border-radius: 4px;
+  color: white;
+  font-size: 1rem;
+  padding-left: 10px;
+  background-color: var(--bg-color);
+  transition: border-color 0.3s ease;
+}
+.form-group-c input:focus,.form-group-c textarea:focus {
+  border-color: var(--hover-color);
+  outline: none;
+}
+.form-group-c textarea {
+  height: 150px;
+  resize: vertical;
+}
+.contact-button {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  padding: 0.75rem;
+  background-color: var(--border-color);
+  border: 2px solid var(--border-color);
+  border-radius: 4px;
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 45px 0;
+  max-width: 200px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: red;
+  border: 2px solid var(--hover-color);
+}
+.buttoncontact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.flex{
+  display: flex;
+}

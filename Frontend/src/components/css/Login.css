@@ -1,0 +1,201 @@
+:root{
+    --bg-color: rgba(21, 21, 21, 0.537);
+    --border-color: #373737;
+    --hover-color : red;
+}
+.login-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  background: #f0f2f500;
+}
+
+.login-form {
+  background: var(--bg-color);
+  backdrop-filter: blur(10px);
+  padding: 2rem 3rem;
+  border: 2px solid var(--border-color);
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 50%;
+}
+.buttonadmin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+}
+.adminlink :hover {
+  color: red;
+  text-decoration: none;
+}
+@media screen and (max-width: 1024px) {
+  .login-container {
+    margin: 70px auto;
+  }
+  .login-form {
+    width: 70%;
+    padding: 2rem 2.5rem;
+  }
+  .login-button {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .login-form {
+    width: 90%;
+    padding: 1.5rem 2rem;
+  }
+  .login-button {
+   max-width: 30%;
+    min-width: 30%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .login-container {
+    height: auto;
+    padding: 20px 10px;
+  }
+  .login-form {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    box-sizing: border-box;
+  }
+  .buttonlogin {
+    justify-content: center;
+  }
+  .login-button {
+    max-width: 30%;
+    min-width: 30%;
+  }
+}
+
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: red;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 2px solid var(--border-color);
+  border-radius: 4px;
+  color: white;
+  font-size: 1rem;
+  padding-left: 10px;
+  background-color: var(--bg-color);
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: red;
+  outline: none;
+}
+
+.login-button {
+  width: 30%;
+  justify-content: space-around;
+  padding: 0.75rem;
+  background-color: var(--border-color);
+  /* border: 2px solid var(--border-color); */
+  border-radius: 4px;
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  /* margin: 10px auto; */
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: red;
+  /* border : 2px solid var(--hover-color); */
+}
+.buttonlogin-k,.buttonlogin{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+.buttonlogin-k a,.buttonlogin a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  /* margin-left: 10px; */
+}
+.buttonlogin-k a:hover,.buttonlogin a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.Design{
+  display: flex;
+  height: 1px;
+  width: 100%;
+  margin-top: 30px;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+}
+.Design h5{
+  margin: 0;
+  color: white;
+}
+.design1{
+  width: 50%;
+  height: 1px;
+  background-color: white;
+  margin-right: 10px;
+}
+.design2{
+  width: 50%;
+  height: 1px;
+  background-color: white;
+  margin-left: 10px;
+}
+.ExtraLogin{
+  height: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  gap: 10px;
+  border-radius: 5px;
+  background-color: white;
+}
+.ExtraLogin img{
+  height: 30px;
+  width: 30px;
+  background-color: white;
+}
+.ExtraLogin,.ExtraLogin img:hover{
+  cursor: pointer;
+}
+.error-message {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+}
+.success-message {
+  color: green;
+  font-weight: bold;
+  text-align: center;
+}
