@@ -86,26 +86,6 @@ export class Amain extends Component {
           galleryPrompt: '',
         })
 
-        // Send updated gallery data to backend to save in galleryData.json
-        fetch('https://xprime-zxu1.onrender.com/api/admin/gallery', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(updatedGalleryData),
-        })
-          .then((response) => {
-            if (!response.ok) {
-              throw new Error('Failed to save gallery data to backend')
-            }
-            return response.text()
-          })
-          .then((data) => {
-            console.log(data)
-          })
-          .catch((error) => {
-            alert(error.message)
-          })
         alert('Gallery data saved to backend and Firestore successfully')
       } catch (error) {
         alert('Error saving gallery data: ' + error.message)
@@ -128,26 +108,6 @@ export class Amain extends Component {
           trendingPrompt: '',
         })
 
-        // Send updated trending data to backend to save in trendingData.json
-        fetch('https://xprime-zxu1.onrender.com/api/admin/trending', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(updatedTrendingData),
-        })
-          .then((response) => {
-            if (!response.ok) {
-              throw new Error('Failed to save trending data to backend')
-            }
-            return response.text()
-          })
-          .then((data) => {
-            console.log(data)
-          })
-          .catch((error) => {
-            alert(error.message)
-          })
         alert('Trending data saved to backend and Firestore successfully')
       } catch (error) {
         alert('Error saving trending data: ' + error.message)
