@@ -10,7 +10,7 @@ export class Footer extends Component {
             <div className="footer-content">
               <div className='footer-section-First'>
                 <h2>Contact Us</h2>
-                <p>1234 Xprime St, Tech City, TX 12345</p>
+                <a>Website: <a href='https://shrikant-pawar-45.github.io/Xprime/' style={{color:'white'}}>www.xprime-prompt.com</a></a>
                 <p>Email: Xprime-prompt@gmail.com</p>
               </div>
               <div className='footer-section-Middle'>
